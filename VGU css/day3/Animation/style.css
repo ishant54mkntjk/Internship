@@ -1,0 +1,44 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.box{
+    height:100px;
+    width:100px;
+    border:2px solid red;
+    background-color: aqua;
+    animation-name: changestate;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+@keyframes changestate{
+    0%{
+        margin-top:0px;
+        margin-left:0px;
+        background-color: antiquewhite;
+    }
+    25%{
+        margin-top:0px;
+        margin-left:150px;
+        background-color: red;
+    }
+    50%{
+        margin-top:150px;
+        margin-left:150px;
+        background-color: blue;
+    }
+    75%{
+        margin-top:150px;
+        margin-left:0px;
+        background-color: chartreuse;
+    }
+    100%{
+        margin-top:0px;
+        margin-left:0px;
+        background-color:deeppink
+    }
+}
+

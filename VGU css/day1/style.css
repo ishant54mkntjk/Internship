@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#nav{
+    height:75px;
+    background-color:#f6f3ec;
+    border-bottom:1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    margin-left:70px;
+}
+
+.link{
+    margin-right:80px;
+}
+
+.link a{
+    color:black;
+    text-decoration:none;
+    font-size:1.1em;
+    margin-left:10px;
+}
+
+#spellink{
+    background-color:black;
+    color:white;
+    padding:7px 12px;
+    border-radius: 65px;
+    
+}
+
+#continer{
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding-top:50px;
+    border-bottom:1px solid black;
+    
+}
+
+.herotext{
+    margin-left:70px;
+    margin-top:60px;
+}
+
+.contentA {
+    margin-top:60px;
+    font-size:8em;
+    font-weight:lighter;
+    margin-bottom:-40px;
+}
+.contentB {
+    font-size:7em;
+    font-weight:lighter;
+}
+
+.contentC{
+    margin-top:20px;
+    font-size:1.5em;
+    font-weight:lighter;
+    margin-bottom:40px;
+}
+
+#sppe{
+    color:white;
+    background-color:black;
+    padding:10px 40px;
+    border-radius:60px;
+    margin-top:100px;
+    text-decoration:none;
+    font-size:1.4em;
+    font-weight:500;
+
+}
+
+div.heroimg img{
+    height:100%;
+}
+
+footer{
+    height: 73px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+footer a{
+    color:black;
+    text-decoration: none;
+    margin-left:30px;
+}
