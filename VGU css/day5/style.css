@@ -209,8 +209,9 @@
 }
 
 #banner{
+    box-sizing: border-box;
     height:90%;
-    width: 80p%;
+    width: 80%;
 }
 
 
