@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+
+/* .container{
+    height:500px;
+    width:700px;
+    margin-top: 50px;
+    margin-left:200px;
+    border: 5px solid red;
+
+} */
+
+h1{
+    color:blueviolet;
+    margin-top:20px;
+    margin-left:250px;
+}
+
+#button:hover{
+    background-color: blueviolet;
+}
+
+ul{
+    margin-top:25px;
+}
+
+li{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#f4f4f4;
+    padding:12px 15px;
+    margin-bottom:12px;
+    border-radius:8px;
+
+}
