@@ -1,13 +1,20 @@
 const express = require("express");
 const app =express();
+const products =require("./data/products");
 
-const PORT =5000;
+app.set("view engine","ejs");
+app.use(express.urlencoded({extended:true}));
 
 app.get("/", (req, res)=> {
-    res.send("Server is running!");
+    res.render("Home");
 });
 
+app.get("/products", (req, res)=>{
+    res.render("product",{products})
+})
+
+const PORT =5000;
 app.listen(PORT, () => {
-     console.log(`Server is running on http://localhost:${PORT}`);
+     console.log("Server run at port",PORT);
 
 })

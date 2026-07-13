@@ -28,4 +28,6 @@ const products = [
         desc:" a portable, handheld device that connects to wireless networks via radio waves to facilitate voice calls, text messaging, and internet access"
     },
     
-]
+];
+
+module.exports = products;
