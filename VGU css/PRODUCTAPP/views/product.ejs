@@ -25,9 +25,10 @@
                     <p class="card-text"><%= product.desc %></p>
                     <a href="#" class="btn btn-success">Add to cart</a>
                     <a href="/products/<%= product.id %>" class="btn btn-secondary">Show</a>
-                    <a href="products/<%= product.id %>" class="btu btu-danger">Edit</a>
-                    <form action="products" method="Delect">
-                        <button 
+                    <a href="/products/<%= product.id %>/edit" class="btn btn-warning">Edit</a>
+                    
+                    <form action="/products/<%= product.id %>?_method=delete" method="post">
+                        <button class="btn btn-danger">Delete</button>
                     </form>
                 </div>
             </div>

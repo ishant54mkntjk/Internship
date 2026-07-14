@@ -35,6 +35,35 @@ app.get("/products/:id", (req,res)=>{
     res.render("show", {product})
 });
 
+
+app.get("/products/:id/edit",(req,res)=>{
+    const {id} = req.params;
+    const product = products.find((item)=> item.id==id);
+    res.render("edit",{product})
+})
+
+app.put("/products/:id",(req,res)=>{
+    const {id} = req.params;
+    const product = products.find((item)=> item.id==id);
+    const {name,image,price,desc} = req.body;
+    product.name = name;
+    product.price = price;
+    product.image = image;
+    product.desc = desc;
+    res.redirect("/products")
+})
+
+app.delete("/products/:id",(req,res)=>{
+    const {id} = req.params;
+    const product = products.find((item)=> item.id==id);
+    const ind = products.indexOf(product);
+
+    products.splice(ind,1);
+
+    res.redirect("/products")
+})
+
+
 const PORT =5000;
 app.listen(PORT, () => {
      console.log("Server run at port",PORT);
