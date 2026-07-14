@@ -1,0 +1,17 @@
+.container{
+    width:50vw;
+    margin:auto;
+    border:2px solid red;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom:20px;
+}
+
+button{
+    background-color: rgb(111, 206, 174);
+    padding:10px;
+}
+
+input{
+    padding: 10px;
+}
