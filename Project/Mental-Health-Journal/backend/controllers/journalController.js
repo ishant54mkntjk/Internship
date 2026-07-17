@@ -3,11 +3,7 @@ const Journal = require("../models/Journal");
 // CREATE JOURNAL
 const createJournal = async (req, res) => {
     try {
-        const {
-            mood,
-            moodScore,
-            journalText
-        } = req.body;
+        const {mood, moodScore,journalText} = req.body;
 
         if (!mood || !moodScore || !journalText) {
             return res.status(400).json({
@@ -15,11 +11,7 @@ const createJournal = async (req, res) => {
             });
         }
 
-        const journal = await Journal.create({
-            mood,
-            moodScore,
-            journalText
-        });
+        const journal = await Journal.create({mood, moodScore, journalText});
 
         res.status(201).json({
             message: "Journal added successfully",
@@ -33,7 +25,6 @@ const createJournal = async (req, res) => {
         });
     }
 };
-
 
 // GET ALL JOURNALS
 const getJournals = async (req, res) => {
@@ -50,7 +41,6 @@ const getJournals = async (req, res) => {
         });
     }
 };
-
 
 module.exports = {
     createJournal,

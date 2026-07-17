@@ -6,7 +6,6 @@ const journalSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-
         moodScore: {
             type: Number,
             required: true
