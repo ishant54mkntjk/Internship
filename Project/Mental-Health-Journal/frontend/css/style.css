@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f5f7f6;
+    color: #24332f;
+}
+
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-right: 1px solid #e8ecea;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #497b67;
+
+    margin-bottom: 45px;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.nav-item {
+    text-decoration: none;
+    color: #71807a;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    font-size: 15px;
+}
+
+
+.nav-item:hover,
+.nav-item.active {
+    background: #e7f1ec;
+    color: #39705a;
+    font-weight: 600;
+}
+
+
+.nav-item span {
+    font-size: 19px;
+}
+
+
+.logout {
+    margin-top: auto;
+}
+
+
+/* MAIN CONTENT */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+
+/* TOP SECTION */
+
+.top-section {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+}
+
+
+.welcome-section h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #71807a;
+    margin-bottom: 25px;
+}
+
+
+/* MOOD */
+
+.mood-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+.mood-btn {
+    width: 65px;
+    height: 65px;
+
+    border: 2px solid transparent;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.mood-btn:hover,
+.mood-btn.selected {
+    border-color: #6ca487;
+    transform: scale(1.1);
+}
+
+
+/* JOURNAL CARD */
+
+.journal-card {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(50, 80, 65, 0.05);
+}
+
+
+.journal-card h2 {
+    margin-bottom: 18px;
+}
+
+
+textarea {
+    width: 100%;
+
+    min-height: 130px;
+
+    resize: none;
+
+    border: 1px solid #e2e8e4;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+textarea:focus {
+    border-color: #6ca487;
+}
+
+
+.add-btn {
+    margin-top: 15px;
+
+    border: none;
+
+    background: #4f876d;
+
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.add-btn:hover {
+    background: #3f725a;
+}
+
+
+/* CALENDAR */
+
+.calendar-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(50, 80, 65, 0.05);
+}
+
+
+.calendar-card h2 {
+    margin-bottom: 15px;
+}
+
+
+.streak {
+    background: #fff4df;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.calendar-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.calendar-header button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 8px;
+
+    text-align: center;
+}
+
+
+.calendar-weekdays {
+    color: #8a9791;
+
+    font-size: 11px;
+
+    margin-bottom: 10px;
+}
+
+
+.calendar-days span {
+    padding: 8px 0;
+
+    font-size: 13px;
+
+    border-radius: 50%;
+}
+
+
+.calendar-days span.has-journal {
+    background: #b6d9c4;
+
+    color: #27573e;
+
+    font-weight: 600;
+}
+
+
+/* HISTORY */
+
+.history-section {
+    margin-top: 35px;
+}
+
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.section-header button {
+    border: none;
+
+    background: none;
+
+    color: #4f876d;
+
+    cursor: pointer;
+}
+
+
+.journal-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.journal-item {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.journal-date {
+    color: #84918b;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+
+.journal-text {
+    color: #44534c;
+}
+
+
+.journal-mood {
+    font-size: 30px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .top-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .welcome-section h1 {
+        font-size: 25px;
+    }
+
+    .mood-selector {
+        justify-content: space-between;
+    }
+
+    .mood-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 23px;
+    }
+
+}
