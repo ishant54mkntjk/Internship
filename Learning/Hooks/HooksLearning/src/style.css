@@ -1,0 +1,9 @@
+.boxxx{
+    border:2px solid red;
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+.CardAPI{
+    gap:20px;
+}
